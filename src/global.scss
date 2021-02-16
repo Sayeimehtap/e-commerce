@@ -77,3 +77,11 @@
     box-shadow: 0px 20px 20px -17px rgba(0, 111, 255, 1);
 }
 
+//removing button focus
+ion-button:focus {
+    outline: none !important;
+}
+
+ion-buttons:focus {
+    outline: none !important;
+}
