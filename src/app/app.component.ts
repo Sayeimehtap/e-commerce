@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { UtilService } from './util.service';
+import { menuController } from '@ionic/core';
+import { Router } from '@angular/router'
 
 @Component({
   selector: 'app-root',
@@ -24,12 +26,23 @@ export class AppComponent implements OnInit {
 
   constructor(
     private utilService: UtilService,
+    private router: Router,
   ) {}
 
   ngOnInit() {
+    this.selectedIndex = 1;
     this.utilService.getMenuState().subscribe(menuState => {
       this.isMenuEnabled = menuState;
 
     });
+  }
+
+  navigate(path, selectedId) {
+    this.selectedIndex = selectedId;
+    this.router.navigate([path]);
+  }
+
+  onToggleMenu() {
+    menuController.toggle();
   }
 }
