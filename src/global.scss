@@ -77,11 +77,20 @@
     box-shadow: 0px 20px 20px -17px rgba(0, 111, 255, 1);
 }
 
-//removing button focus
+//Removing button focus
 ion-button:focus {
     outline: none !important;
 }
 
 ion-buttons:focus {
     outline: none !important;
+}
+
+//Removing IOS and Android header line for entire app
+ion-toolbar {
+    --border-width: 0 !important;
+}
+
+.header-md::after {
+    background: none;
 }

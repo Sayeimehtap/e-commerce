@@ -9,6 +9,8 @@ import { DataService } from '../data.service';
 export class HomePage implements OnInit {
 
   public categories = [];
+  public featuredProducts = [];
+  public bestSellProducts = [];
 
   constructor(
     private dataService: DataService,
@@ -16,7 +18,8 @@ export class HomePage implements OnInit {
 
   ngOnInit() {
     this.categories = this.dataService.getCategories();
-    console.log(this.categories);
+    this.featuredProducts = this.dataService.getFeaturedProducts();
+    this.bestSellProducts = this.dataService.getBestSellProducts();
   }
 
 }
