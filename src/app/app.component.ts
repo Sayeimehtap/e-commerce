@@ -8,7 +8,7 @@ import { UtilService } from './util.service';
 })
 export class AppComponent implements OnInit {
 
-  public isMenuEnabled: boolean = false;
+  public isMenuEnabled: boolean = true;
   public selectedIndex = 0;
   public menuItems = [
     {
