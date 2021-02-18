@@ -106,3 +106,19 @@ ion-toolbar {
         right: 10%;
     }
 }
+
+.product-slider {
+    .swiper-pagination {
+        text-align: left;
+        padding-left: 20px;
+
+        .swiper-pagination-bullet {
+            background: #ffffff;
+            opacity: 1;
+        }
+
+        .swiper-pagination-bullet-active {
+            background: var(--ion-color-primary);
+        }
+    }
+} 
